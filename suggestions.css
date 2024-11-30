@@ -1,0 +1,169 @@
+/* 页面背景色和字体设置 */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 顶部导航栏样式 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3a8a;
+  padding: 10px 20px;
+  color: white;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* 用户建议提交表单 */
+.suggestion-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.suggestion-form h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.suggestion-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.suggestion-form button {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.suggestion-form button:hover {
+  background-color: #3b82f6;
+}
+
+/* 显示所有建议 */
+.suggestions-list {
+  margin-top: 40px;
+}
+
+.suggestions-list h2 {
+  font-size: 22px;
+  color: #1e3a8a;
+}
+
+.suggestion {
+  background-color: #e0f7fa;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion p {
+  font-size: 16px;
+  color: #555;
+}
+
+.suggestion button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.suggestion button:hover {
+  background-color: #d32f2f;
+}
+
+/* 页脚样式 */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .suggestion-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .suggestions-list {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .suggestion {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .suggestion-form {
+    width: 100%;
+  }
+
+  .suggestion button {
+    width: 100%;
+    padding: 10px;
+  }
+}
