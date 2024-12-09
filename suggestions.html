@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>建议页面</title>
+  <link rel="stylesheet" href="suggestions.css">
+</head>
+<body>
+  <div class="suggestions-page">
+    <!-- 顶部导航 -->
+    <header>
+      <h1>建议中心</h1>
+    </header>
+
+    <!-- 提交建议表单 -->
+    <section class="suggestion-form">
+      <h2>提交您的建议</h2>
+      <form id="suggestion-form">
+        <label for="suggestion-text">您的建议:</label>
+        <textarea id="suggestion-text" rows="4" placeholder="请输入您的建议..." required></textarea>
+        <button type="submit">提交建议</button>
+      </form>
+    </section>
+
+    <!-- 显示建议列表 -->
+    <section class="suggestions-list">
+      <h2>所有建议</h2>
+      <div id="suggestions-container">
+        <!-- 动态生成的建议将出现在这里 -->
+      </div>
+    </section>
+  </div>
+
+  <!-- Firebase 和 JavaScript -->
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"></script>
+  <script type="module" src="suggestions.js"></script>
+</body>
+</html>
