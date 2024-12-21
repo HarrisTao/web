@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.suggestion-form {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+}
+
+.suggestion-form label {
+  font-size: 18px;
+}
+
+.suggestion-form textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.suggestion-form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggestion-form button:hover {
+  background-color: #3b82f6;
+}
+
+.suggestions-list {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+}
+
+.suggestions-list h2 {
+  text-align: center;
+}
+
+.suggestion-item {
+  background: #e0f7fa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestion-item .user-info {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.suggestion-item .suggestion-text {
+  margin-bottom: 10px;
+}
+
+.suggestion-item button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.suggestion-item button:hover {
+  background-color: #d32f2f;
+}

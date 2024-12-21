@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>圣诞节活动</title>
+  <link rel="stylesheet" href="events.css">
+  <style>
+    /* 添加适配圣诞树视频的样式 */
+    #main {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-color: black;
+    }
+    #video1 {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>圣诞节活动</h1>
+  </header>
+
+  <!-- 活动内容 -->
+  <main id="main">
+    <video id="video1" muted="muted" autoplay="autoplay" loop="loop" 
+      src="https://tianfeng.space/wp-content/uploads/2022/12/圣诞树1.mp4">
+    </video>
+  </main>
+
+  <script>
+    // 检查活动时间是否符合或管理员登录状态
+    const eventStartDate = new Date("2024-12-25T00:00:00").getTime();
+    const currentDate = new Date().getTime();
+
+    // 模拟管理员登录状态
+    const adminCredentials = {
+      username: "admin",
+      password: "admin123"
+    };
+
+    function isAdminLoggedIn() {
+      const storedUsername = sessionStorage.getItem("adminUsername");
+      const storedPassword = sessionStorage.getItem("adminPassword");
+      return storedUsername === adminCredentials.username && storedPassword === adminCredentials.password;
+    }
+
+    if (currentDate < eventStartDate && !isAdminLoggedIn()) {
+      alert("活动尚未开始，请稍后访问！");
+      window.location.href = "index.html"; // 跳转回首页
+    }
+
+    // 登录管理员方法
+    function adminLogin() {
+      const username = prompt("请输入管理员用户名：");
+      const password = prompt("请输入管理员密码：");
+      if (username === adminCredentials.username && password === adminCredentials.password) {
+        sessionStorage.setItem("adminUsername", username);
+        sessionStorage.setItem("adminPassword", password);
+        alert("管理员登录成功！");
+      } else {
+        alert("管理员用户名或密码错误！");
+      }
+    }
+
+    // 如果未登录管理员且早于活动时间，显示管理员登录选项
+    if (currentDate < eventStartDate && !isAdminLoggedIn()) {
+      const login = confirm("您是管理员吗？点击确定进行登录");
+      if (login) {
+        adminLogin();
+        location.reload(); // 刷新页面
+      }
+    }
+  </script>
+</body>
+</html>

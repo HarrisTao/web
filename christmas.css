@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.christmas-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #2f855a;
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.activity-content {
+  margin-top: 50px;
+}
+
+#countdown {
+  font-size: 2rem;
+  color: #ff3b30;
+  font-weight: bold;
+}
+
+.tree-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree {
+  width: 100px;
+  height: 150px;
+  background-color: green;
+  border-radius: 0 0 50% 50%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.tree::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
+
+.tree .star {
+  position: absolute;
+  top: -25px;
+  left: 35px;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+footer {
+  margin-top: 50px;
+  color: #555;
+}
+
